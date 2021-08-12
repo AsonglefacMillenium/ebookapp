@@ -193,7 +193,31 @@ class _MyHomePageState extends State<MyHomePage>
                                       ),
                                      
                                     ),
-                                    Text(books[i]['title']),
+                                    
+                                    SizedBox(width: 10,),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Icon(Icons.star, size: 20, color: AppColors.starColor,),
+                                            Text(books[i]["country"], style: TextStyle(color: AppColors.menuColor2),),
+                                          ],
+                                        ),
+                                        Text(books[i]["title"], style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: "Avenir"),),
+                                        Text(books[i]["author"], style: TextStyle(color: AppColors.subTitleText, fontSize: 12, fontFamily: "Avenir"),),
+                                        Container(
+                                          height:20 ,
+                                          width: 60,
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(3),
+                                            color: AppColors.loveColor,
+                                            ),
+                                          child: Text('Love', style: TextStyle(fontSize: 10, color: Colors.white, fontFamily: "Avenir",),),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               ),
